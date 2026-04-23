@@ -1,0 +1,40 @@
+type PriceBreakdown = 
+ record {
+   ageDiscount: float64;
+   amenityBonus: float64;
+   basePrice: float64;
+   floorBonus: float64;
+   locationMultiplier: float64;
+ };
+type PredictionResult = 
+ record {
+   breakdown: PriceBreakdown;
+   confidence: text;
+   estimatedPrice: float64;
+   pricePerSqft: float64;
+ };
+type PredictionRecord = 
+ record {
+   input: PredictionInput;
+   result: PredictionResult;
+   timestamp: int;
+ };
+type PredictionInput = 
+ record {
+   area: float64;
+   bathrooms: nat;
+   bhk: nat;
+   city: text;
+   floor: nat;
+   furnishing: text;
+   houseAge: nat;
+   location: text;
+   parking: bool;
+   propertyType: text;
+   totalFloors: nat;
+ };
+service : {
+  getPredictionStats: () -> (nat) query;
+  getRecentPredictions: () -> (vec PredictionRecord) query;
+  predictPrice: (input: PredictionInput) -> (PredictionResult);
+}

@@ -1,0 +1,46 @@
+// Version: 1.0.0
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type PredictionInput__518021244 =
+  {
+    area : Float;
+    bathrooms : Nat;
+    bhk : Nat;
+    city : Text;
+    floor : Nat;
+    furnishing : Text;
+    houseAge : Nat;
+    location : Text;
+    parking : Bool;
+    propertyType : Text;
+    totalFloors : Nat
+  };
+type PredictionRecord__192094392 =
+  {
+    input : PredictionInput__518021244;
+    result : PredictionResult__620783739;
+    timestamp : Int
+  };
+type PredictionResult__620783739 =
+  {
+    breakdown : PriceBreakdown__855432689;
+    confidence : Text;
+    estimatedPrice : Float;
+    pricePerSqft : Float
+  };
+type PriceBreakdown__855432689 =
+  {
+    ageDiscount : Float;
+    amenityBonus : Float;
+    basePrice : Float;
+    floorBonus : Float;
+    locationMultiplier : Float
+  };
+actor {
+  stable predictionHistory :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?PredictionRecord__192094392]];
+      var elementIndex : Nat__490723111
+    }
+};

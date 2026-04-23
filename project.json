@@ -1,0 +1,23 @@
+{
+  "overview": "A premium, modern property price prediction web app for Gujarat, India. Users can estimate property prices across major Gujarat cities using smart calculation logic that factors in area, location, property type, furnishing, and more.",
+  "features": [
+    "House price prediction with 13 input parameters",
+    "Dynamic city-based location dropdowns for major Gujarat cities",
+    "Realistic price calculation logic in INR (₹)",
+    "Premium hero section with real estate imagery",
+    "How It Works and feature highlights sections",
+    "Fully responsive mobile and desktop design",
+    "Dark navy and soft peach professional color scheme",
+    "Loading animation and animated result card"
+  ],
+  "category": "productivity",
+  "tags": [
+    "real-estate",
+    "price-prediction",
+    "gujarat",
+    "india",
+    "property",
+    "calculator"
+  ],
+  "last_updated": "2026-04-23T17:08:02.793Z"
+}
